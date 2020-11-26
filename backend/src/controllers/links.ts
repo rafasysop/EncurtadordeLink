@@ -34,7 +34,7 @@ function getLink(req: Request, res: Response) {
 
 function hitLink(req: Request, res: Response) {
     const code = req.params.code as string;
-    const index = links.findIndex(item => isTemplateMiddle.code === code);
+    const index = links.findIndex(item => item.code === code);
 
     if (index === -1)
         res.sendStatus(404);
