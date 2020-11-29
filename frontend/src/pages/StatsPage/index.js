@@ -7,7 +7,8 @@ import ShortnerService from '../../services/shortenerService';
 
 // eslint-disable-next-line no-unused-vars
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-
+import { parseISO, formatRelative } from 'date-fns';
+import ptBR from 'date-fns/locale/pt-BR';
 import { StatsContainer, StatsRow, StatsBox, StatsTitle } from './styles'
 
 class StatsPage extends React.Component {
@@ -28,7 +29,15 @@ class StatsPage extends React.Component {
         try {
             const service = new ShortnerService();
             const shortnerURL = await  service.getStats(code);
+            const parsedDate = parseISO(shortnerURL.updatedAt);
+            const currentDate =  new Date();
 
+            consst relativeDate = formatRelative(parsedDate, currentDate, {
+                locale: ptBR,
+            });
+
+            shortnerURL.relativeDate = relativeDate;
+            
             this.setState({isLoading: false, shortnerURL});
         } catch (error) {
             this.setState({isLoading: false, errorMessage:'Ops a url solicitada nao existe' });
