@@ -7,7 +7,7 @@ yarn-error.log*
 lerna-debug.log*
 password.aula
 src/databbase.ts
-frontend/*
+
 
 # Diagnostic reports (https://nodejs.org/api/report.html)
 report.[0-9]*.[0-9]*.[0-9]*.[0-9]*.json
