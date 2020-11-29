@@ -46,7 +46,7 @@ class RedirectPage extends React.Component {
                         </StatsContainer>
                     </Header>
                 ) : (
-                    <Header>Redireciopnando....</Header>
+                    <Header className="text-center">Redireciopnando....</Header>
                 )
                 }
             </Container>
