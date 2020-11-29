@@ -32,12 +32,12 @@ class StatsPage extends React.Component {
             const parsedDate = parseISO(shortnerURL.updatedAt);
             const currentDate =  new Date();
 
-            consst relativeDate = formatRelative(parsedDate, currentDate, {
+            const relativeDate = formatRelative(parsedDate, currentDate, {
                 locale: ptBR,
             });
 
             shortnerURL.relativeDate = relativeDate;
-            
+
             this.setState({isLoading: false, shortnerURL});
         } catch (error) {
             this.setState({isLoading: false, errorMessage:'Ops a url solicitada nao existe' });
