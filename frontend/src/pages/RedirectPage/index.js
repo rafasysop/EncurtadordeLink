@@ -5,6 +5,8 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
 import shortenerService from '../../services/shortenerService';
 import ShortenerService from '../../services/shortenerService';
+import { StatsContainer } from './styles'
+
 
 
 
@@ -27,14 +29,26 @@ class RedirectPage extends React.Component {
             const { url } = await service.getLink(code);
             window.location = url;
         } catch (error) {
-            this.state({isLoading: false, errorMessage: 'A URL solicitada não existe'});
+            this.setState({isLoading: false, errorMessage: 'A URL solicitada não existe',});
         }
     }
 
     render(){
+        const {errorMessage} = this.state;
         return (
             <Container>
-                <Header>Redireciopnando....</Header>
+                {errorMessage ? (
+                    <Header>
+                        <StatsContainer className="text-center">
+                            <FontAwesomeIcon size="3x" color="red" icon="exclamation-triangle" />
+                            <p className="m-3">{errorMessage}</p>
+                            <a className="btn btn-primary" href="/">Encurtar uma nova URL</a>
+                        </StatsContainer>
+                    </Header>
+                ) : (
+                    <Header>Redireciopnando....</Header>
+                )
+                }
             </Container>
         )
     }
