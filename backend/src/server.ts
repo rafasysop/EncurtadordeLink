@@ -1,5 +1,5 @@
 import app from './app';
-import database from './database'
+import database from './database';
 
 // database.sync({force: true});
 
