@@ -9,3 +9,12 @@ Projeto Encurtador de link desenvolvido em:
 * Bootstrap
 * styled-component 
 * Mysql
+
+
+### Tela Inicial
+
+![](img/stats.png)
+
+### Tela de Estatisticas
+
+![](img/homepage.png)
