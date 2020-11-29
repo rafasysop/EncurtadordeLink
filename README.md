@@ -13,8 +13,8 @@ Projeto Encurtador de link desenvolvido em:
 
 ### Tela Inicial
 
-![](img/stats.png)
+![](img/homepage.png)
 
 ### Tela de Estatisticas
 
-![](img/homepage.png)
+![](img/stats.png)
