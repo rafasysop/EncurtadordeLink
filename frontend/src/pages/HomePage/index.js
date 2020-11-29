@@ -4,6 +4,7 @@ import { Container, FormControl, } from 'react-bootstrap'
 import '../../assets/bulma.min.css'
 import { ContentContainer, Form } from './styles'
 import Switch from "react-bootstrap/esm/Switch";
+import '../../assets/bulma.min.css'
 
 class HomePage extends React.Component {
   constructor(props) {
@@ -15,7 +16,7 @@ class HomePage extends React.Component {
       errorMessage: '',
     }
   }
-
+ //enChange={e => this.setState({ url: e.target.value })}
   render() {
     return (
       <Container>
@@ -23,17 +24,14 @@ class HomePage extends React.Component {
         <ContentContainer>
           <Form>
             <ContentContainer>
-              <FormControl placeholder='Digite a url para encurtar'
+              <input placeholder='Digite a url para encurtar'
                 defaultValue=''
-                enChange={e => this.setState({ url: e.target.value })}
               />
-              <ContentContainer.Append>
-
-              </ContentContainer.Append>
+              <buttom className='buttom' type='submit' enChange={e => this.setState({ url: e.target.value })}>Encurtar</buttom>
             </ContentContainer>
           </Form>
         </ContentContainer>
-        </Container>
+      </Container>
     );
   }
 }
