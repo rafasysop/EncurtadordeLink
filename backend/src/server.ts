@@ -6,5 +6,5 @@ import database from './database'
 console.log('iniciou database');
 
 
-app.listen(3001);
+app.listen(3000);
 console.log('Server Iniciado na porta 3333');

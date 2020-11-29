@@ -1,0 +1,10 @@
+@import './assets/bulma.min.css';
+body {
+    background-color: #fff;
+    color: #43626f;
+    display: flex;
+    flex-direction: row;
+    font-family: sans-serif;
+    justify-content: center;
+    font-size: 0.925rem;
+}
